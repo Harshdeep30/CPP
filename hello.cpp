@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
-#include <conio.h>
 int main(){
-    cout<<"Hello";
-    
+    int num;
+    cout<<"enter number ";
+    cin>>num;
+    cout<<"You entered "<<num;
 }
