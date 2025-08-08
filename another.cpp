@@ -49,14 +49,33 @@ using namespace std;
 
 
 
-class demo{
-    int a=10;
-    friend void show(demo);
+// class demo{
+//     int a=10;
+//     friend void show(demo);
+// };
+// void show(demo d){
+//     cout<<"value:" <<d.a<<endl;
+// };
+// int main(){
+//     demo d;
+//     show(d);
+// }
+
+
+class B;
+class A{
+    int x=5;
+    friend class B;
 };
-void show(demo d){
-    cout<<"value:" <<d.a<<endl;
+class B{
+    public:
+    void display(A a){
+        cout<<"value: "<<a.x<<endl;
+
+    };
 };
 int main(){
-    demo d;
-    show(d);
+    A a;
+    B b;
+    b.display(a);
 }
